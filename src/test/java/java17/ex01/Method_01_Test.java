@@ -21,7 +21,11 @@ public class Method_01_Test {
         // TODO Cette méthode retourne le résultat de l'addition des ages des personnes
 
         default int sumAge() {
-            return findAll().stream().mapToInt(Person::getAge).sum();
+            int sum = 0;
+            for (Person person : findAll()) {
+                sum += person.getAge();
+            }
+            return sum;
         }
     }
     // end::IDao[]
