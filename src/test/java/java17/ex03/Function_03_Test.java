@@ -28,7 +28,7 @@ public class Function_03_Test {
         Person mother = new Person("Aline", "Lebreton", 22, "alino");
 
         // TODO compléter le test pour qu'il soit passant
-        Person child = null;
+        Person child = new Person((father.getFirstname() + " " + mother.getFirstname()), father.getLastname(), 0, null );
 
         assert child.getFirstname().equals("John Aline");
         assert child.getLastname().equals("France");
