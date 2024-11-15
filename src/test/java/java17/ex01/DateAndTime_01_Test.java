@@ -37,10 +37,14 @@ public class DateAndTime_01_Test {
 
 		// TODO modifier l'objet calendar pour que le test soit passant
 
+		calendar.set(2017, Calendar.MARCH, 24, 1, 2, 3);
+
 		assertThat(calendar.getTime().toString(), is("Fri Mar 24 01:02:03 CET 2017"));
 
 		// calendar est mutable... :-(
 		// TODO modifier l'objet calendar pour que le test soit passant
+
+		calendar.set(Calendar.DATE, 25);
 
 		assertThat(calendar.getTime().toString(), is("Sat Mar 25 01:02:03 CET 2017"));
 	}
